@@ -26,6 +26,9 @@ h6{
     line-height: 24px;
     color: var(--accent);
 }
+.error{
+    color: var(--accent);
+}
 p{
     font-size: 22px;
     line-height: 33px;

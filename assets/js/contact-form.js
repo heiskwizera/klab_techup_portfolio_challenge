@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 		});
 		submitSignupFormNow = function (e) {
 			var t = e.serialize();
-			var n = "contact-form.php";
+			var n = "#";
 			jQuery.ajax({
 				url : n,
 				type : "POST",
