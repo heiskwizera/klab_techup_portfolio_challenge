@@ -6,7 +6,7 @@ This is a personal portfolio website. It is built using HTML, CSS, and JavaScrip
 https://rb.gy/ozdqpd
 
 ## Website Demo
-https://rb.gy/
+https://rb.gy/42vmpn
 
 ## Run Locally
 
