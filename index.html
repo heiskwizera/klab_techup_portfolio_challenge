@@ -761,10 +761,12 @@
                   <div class="form-group">
                      <label for="recipient-name" class="col-form-label">Email:</label>
                      <input type="email" class="form-control" id="recipient-name">
+                     <div id="msg"></div>
                   </div>
                   <div class="form-group">
                      <label for="message-text" class="col-form-label">Password:</label>
                      <input type="password" class="form-control" id="message-text">
+                     <div id="passmsg"></div>
                   </div>
                   <button type="submit" class="btn btn-warning">
                      Login
@@ -777,6 +779,30 @@
          </div>
       </div>
    </div>
+
+   <!-- Login successfully Modal with tick icon-->
+   <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog"
+      aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="loginSuccessModalLabel">Login Success</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="alert alert-success" role="alert">
+                  <h4 class="alert-heading">Well done!</h4>
+                  <p>You have successfully logged in.</p>
+                  <hr>
+                  <p class="mb-0">You can now access your account.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
 
    <style>
       .modal {
@@ -832,9 +858,34 @@
          e.preventDefault();
          var email = $("#recipient-name").val();
          var password = $("#message-text").val();
-         console.log(email, password);
-      });
 
+         $allValid = false;
+
+         // Validate email and password and if error show error under the input field on each input field until it is corrected
+         if (email == "") {
+            $("#msg").html("Please enter your email");
+            $("#msg").css("color", "red");
+            $allValid = false;
+         }else{
+            $("#msg").html("");
+            $allValid = true;
+         }
+         
+         if (password == "") {
+            $("#passmsg").html("Please enter your password");
+            $("#passmsg").css("color", "red");
+            $allValid = false;
+         }else{
+            $("#passmsg").html("");
+            $allValid = true;
+         }
+
+         // if all input fields are valid then show login success modal
+         if ($allValid) {
+            $("#loginModal").modal("hide");
+            $("#loginSuccessModal").modal("show");
+         }
+      });
 
 
       // when loginLink is clicked, hide the navbar
@@ -922,8 +973,6 @@
 
       });
 
-   </script>
-   <script>
       document.querySelectorAll('.nav-item a').forEach(function (link, index) {
 
          link.addEventListener('click', function () {
