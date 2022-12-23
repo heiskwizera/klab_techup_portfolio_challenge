@@ -17,6 +17,10 @@
     width: 186px;
     height: 186px;
 }
+
+.d-inline-block{
+    margin-left: 65px;
+}
 @media only screen and (max-width: 1199px){
     h1 {
         font-size: 74px;
@@ -829,7 +833,7 @@
         font-size: 18px;
     }
     .contact-form input, .contact-form textarea {
-        box-shadow: 0 0 65px 0 #e9eefc;
+        box-shadow: 0 0 65px 0 #292543;
     }
     
     .tastimonials-con{
@@ -1006,7 +1010,7 @@
         width: 330px;
     }
     .contact-form input, .contact-form textarea {
-        box-shadow: 0 0 30px 0 #e9eefc;
+        box-shadow: 0 0 30px 0 #211e39;
     }
     .dynamic-txts {
         height: 36px;

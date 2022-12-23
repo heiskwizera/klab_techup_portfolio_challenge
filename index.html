@@ -55,15 +55,16 @@
                               <a class="nav-link p-0" href="#blog">Blog</a>
                            </li>
                         </ul>
+                       
                         <div class="d-inline-block contact">
-                           <a href="#Contact">Contact</a>
-                        </div>
+                           <a href="#" id="loginLink"  class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</a>
+                         </div>  
                      </div>
                   </nav>
                </div>
             </div>
          </header>
-
+         
 
          <section class="banner-main-con" id="home">
             <div class="container pl-0 pr-0">
@@ -456,7 +457,7 @@
             <div class="col-lg-5">
                <div class="tastimonials-left-con wow slideInLeft">
                   <figure class="mb-0">
-                     <img src="assets/image/tastimonials-img.png" alt="tastimonials-img" class="img-fluid">
+                     <img src="assets/image/testimonial.svg" alt="tastimonials-img" class="img-fluid">
                   </figure>
                </div>
             </div>
@@ -471,12 +472,11 @@
                               <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
                            </figure>
                            <div class="testimonials-inner-content">
-                              <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
-                                 aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
-                                 magnam aliquam quaerat voluptatem reprehenderit in voluptate
-                                 cillum dolore eu fugiat nulla pariatur maxime...
+                              <p>
+                                 I am happy with KWIZERA's work. He is very professional and has a great eye for design. He
+                                 is very responsive and always willing to make changes. I would definitely recommend him.
                               </p>
-                              <span class="d-block auther-name">Kevin Andrew</span>
+                              <span class="d-block auther-name">Nicole RUBAYIZA</span>
                               <span class="d-block">CEO of the company</span>
                            </div>
                         </div>
@@ -489,34 +489,17 @@
                               <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
                            </figure>
                            <div class="testimonials-inner-content">
-                              <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
-                                 aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
-                                 magnam aliquam quaerat voluptatem reprehenderit in voluptate
-                                 cillum dolore eu fugiat nulla pariatur maxime...
+                              <p>
+                                 KWIZERA is a very talented designer. He is very responsive and always willing to make
+                                 changes. I would definitely recommend him.
+
                               </p>
-                              <span class="d-block auther-name">Kevin Andrew</span>
+                              <span class="d-block auther-name">Elie NDISANZE</span>
                               <span class="d-block">CEO of the company</span>
                            </div>
                         </div>
                      </div>
-                     <div class="carousel-item">
-                        <div class="testimonials-content">
-                           <h6>Testimonials</h6>
-                           <h2>Happy Clients Feedback</h2>
-                           <figure class="mb-0">
-                              <img src="assets/image/comma-icon.png" alt="comma-icon" class="img-fluid">
-                           </figure>
-                           <div class="testimonials-inner-content">
-                              <p>Quisruam est, qui dolorem ipsum quia dolor sit amet, consecteaur
-                                 aeci velit, sed quia non numquam eius modi tempora incidunt ut lao
-                                 magnam aliquam quaerat voluptatem reprehenderit in voluptate
-                                 cillum dolore eu fugiat nulla pariatur maxime...
-                              </p>
-                              <span class="d-block auther-name">Kevin Andrew</span>
-                              <span class="d-block">CEO of the company</span>
-                           </div>
-                        </div>
-                     </div>
+                     
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                      <i class="fas fa-arrow-left d-flex align-items-center justify-content-center"></i>
@@ -707,7 +690,7 @@
                      </div>
                      <div class="row">
                         <div class="col-lg-12">
-                           <div class=" form-group mb-0">
+                           <div class="form-group mb-0">
                               <textarea placeholder="Message" rows="3" name="comments" id="comments"></textarea>
                            </div>
                         </div>
@@ -760,7 +743,79 @@
       </div>
    </div>
    <!-- <a id="button"></a> -->
+
+
+   <!-- Login Modal Form -->
+   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="loginModalLabel">Login</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form id="loginForm">
+                  <div class="form-group">
+                     <label for="recipient-name" class="col-form-label">Email:</label>
+                     <input type="email" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                     <label for="message-text" class="col-form-label">Password:</label>
+                     <input type="password" class="form-control" id="message-text">
+                  </div>
+                  <button type="submit" class="btn btn-warning">
+                     Login
+                     <i class="fas fa-sign-in-alt"></i>
+                  </button>
+
+               </form>
+            </div>
+         
+         </div>
+      </div>
+   </div>
+
+   <style>
+      .modal {
+         display: none;
+         padding-top: 100px;
+         left: 0;
+         top: 0;
+         width: 100%;
+         background-color: rgb(0, 0, 0);
+         background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+         color: #fefefe;
+         margin: auto;
+         padding: 20px;
+         border: 1px solid #888;
+         width: 80%;
+      }
+
+      .close {
+         color: #aaaaaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+      }
+
+     
+   </style>
    
+   
+
+
+
+
+
+
+
+
+
    <script src="assets/js/wow.js"></script>
    <script>
       new WOW().init();
@@ -772,6 +827,22 @@
    <script src="assets/js/custom-script.js"> </script>
    <script src="assets/js/contact-form.js"></script>
    <script>
+      // if loginForm of the modal is submitted get email and password values
+      $("#loginForm").submit(function (e) {
+         e.preventDefault();
+         var email = $("#recipient-name").val();
+         var password = $("#message-text").val();
+         console.log(email, password);
+      });
+
+
+
+      // when loginLink is clicked, hide the navbar
+      $("#loginLink").click(function () {
+         $(".navbar-collapse").collapse("hide");
+      });
+
+
       filterSelection("all")
       function filterSelection(c) {
          var x, i;

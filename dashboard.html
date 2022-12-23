@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <title>Dashboard</title>
+</head>
+
+
+
+
+<body>
+
+    <!-- Create simple responsive Dashboard with right sidebar-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/image/logo-img.png" style="width: 200px;" alt="logo">
+                        </a>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="profile.html">
+                                    <span class="icon"><i class="fas fa-user"></i></span>
+                                    <span class="title">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                                    <span class="title">Contact</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <span class="icon"><i class="fas fa-info-circle"></i></span>
+                                    <span class="title">About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                                    <span class="title">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="main-content">
+                    <div class="header">
+                        <div class="header-menu">
+                            <div class="title">Dashboard</div>
+                            <div class="sidebar-btn">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="row pb-10">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Total Users</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="card-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="card-number">100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title">Total Users</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="card-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="card-number">100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+     
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .row {
+            margin: 0;
+        }
+        .main{
+            margin-top: 20px;
+        }
+
+        .sidebar {
+            background: #14213d;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar.active {
+            margin-left: -300px;
+        }
+
+        .sidebar .logo {
+            padding: 20px;
+            background: #14213d;
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar .logo img {
+            width: 100%;
+        }
+
+        .sidebar .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .sidebar .sidebar-menu ul li {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .sidebar-menu ul li a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar .sidebar-menu ul li a:hover {
+            color: #007bff;
+        }
+
+        .sidebar .sidebar-menu ul li a .icon {
+            width: 40px;
+            text-align: center;
+        }
+
+        .sidebar .sidebar-menu ul li a .icon i {
+            font-size: 18px;
+        }
+
+        .sidebar .sidebar-menu ul li a .title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .main-content {
+            transition: all 0.3s ease;
+            margin-left: -98px;
+        }
+
+        
+        .main-content .header {
+            background: #14213d;
+            padding: 32px;
+            border-bottom: 1px solid #eee;
+            color: #fff;
+        }
+
+        .main-content .header .header-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main-content .header .header-menu .title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    </style>
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"> </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
+    <script src="assets/js/popper.min.js"> </script>
+    <script src="assets/js/bootstrap.min.js"> </script>
+    <script src="assets/js/custom-script.js"> </script>
+    <script src="assets/js/contact-form.js"></script>
+</body>
