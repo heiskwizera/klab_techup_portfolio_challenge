@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>Dashboard</title>
+</head>
+
+<style>
+    .container-fluid {
+        padding: 0;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .main {
+        margin-top: 20px;
+    }
+
+    .sidebar {
+        background: #14213d;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar.active {
+        margin-left: -300px;
+    }
+
+    .sidebar .logo {
+        padding: 20px;
+        background: #14213d;
+        border-bottom: 1px solid #eee;
+    }
+
+    .sidebar .logo img {
+        width: 100%;
+    }
+
+    .sidebar .sidebar-menu {
+        padding: 20px 0;
+    }
+
+    .sidebar .sidebar-menu ul li {
+        list-style: none;
+        margin-bottom: 15px;
+    }
+
+    .sidebar .sidebar-menu ul li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar .sidebar-menu ul li a:hover {
+        color: #007bff;
+    }
+
+    .sidebar .sidebar-menu ul li a .icon {
+        width: 40px;
+        text-align: center;
+    }
+
+    .sidebar .sidebar-menu ul li a .icon i {
+        font-size: 18px;
+    }
+
+    .sidebar .sidebar-menu ul li a .title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .main-content {
+        transition: all 0.3s ease;
+        margin-left: -98px;
+    }
+
+
+    .main-content .header {
+        background: #14213d;
+        padding: 32px;
+        border-bottom: 1px solid #eee;
+        color: #fff;
+    }
+
+    .main-content .header .header-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-content .header .header-menu .title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .fa,
+    .far,
+    .fas {
+        color: #fca61f;
+    }
+</style>
+
+
+
+
+<body>
+
+    <!-- Create simple responsive Dashboard with right sidebar-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/image/logo-img.png" style="width: 200px;" alt="logo">
+                        </a>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="blog.html">
+                                    <span class="icon"><i class="fas fa-blog"></i></span>
+                                    <span class="title text-warning">Blogs</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="message.html">
+                                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                                    <span class="title">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                                    <span class="title">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="main-content">
+                    <div class="header">
+                        <div class="header-menu">
+                            <div class="title">Blogs</div>
+                            <div class="sidebar-btn">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">List of Blogs</h3>
+                                            <div class="card-tools">
+                                                <div class="input-group input-group-sm" style="width: 200px;">
+                                                    <input type="text" name="table_search" id="table_search"
+                                                        class="form-control float-right" placeholder="Search">
+
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="btn btn-default" id="table_search_submit"><i
+                                                                class="fas fa-search"></i></button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <a href="add-blog.html" class="btn btn-primary btn float-right pt-10"
+                                                data-toggle="modal" data-target="#addBlog">
+                                                <i class="fas fa-plus"></i> Add Blog
+                                            </a>
+
+                                        </div>
+
+
+
+
+                                        <!-- Table containing Blogs with edit and delete icons -->
+                                        <div class="card-body table-responsive p-0">
+                                            <table class="table table-hover text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Title</th>
+                                                        <th>Author</th>
+                                                        <th>Image</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="blogList">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal form to add new blog with inputs : Title,author,paste image url,author, and date -->
+    <div class="modal fade" id="addBlog" tabindex="-1" role="dialog" aria-labelledby="addBlogLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning" id="addBlogLabel">Add Blog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-white">
+                    <form id="addBlogForm">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" class="form-control" placeholder="Title">
+                            <div id="titlemsg" class="auth-error-msg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" class="form-control" placeholder="Description"
+                                rows="3"></textarea>
+                            <div id="descriptionmsg" class="auth-error-msg"></div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input type="text" name="author" id="author" class="form-control" placeholder="Author">
+                            <div id="authormsg" class="auth-error-msg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image Url</label>
+                            <input type="url" name="image" id="image" class="form-control"
+                                placeholder="Paste Image Url">
+                            <div id="imagemsg" class="auth-error-msg"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" id="date" class="form-control" placeholder="Date">
+                            <div id="datemsg" class="auth-error-msg"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Blog</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Blog Modal -->
+    <div class="modal fade" id="viewBlog" tabindex="-1" role="dialog" aria-labelledby="viewBlogLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning" id="viewBlogLabel">View Blog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-blog"></i>
+                                Blog Details
+                            </h3>
+                        </div>
+
+                        <!-- List of details of selected blog -->
+                        <div class="card-body">
+                            <strong><i class="fas fa-book mr-1"></i> Title</strong>
+                            <p class="text-muted" id="viewTitle"></p>
+                            <hr>
+                            <strong><i class="fas fa-book mr-1"></i> Description</strong>
+                            <p class="text-muted" id="viewDescription"></p>
+                            <hr>
+                            <strong><i class="fas fa-pencil-alt mr-1"></i> Author</strong>
+                            <p class="text-muted" id="viewAuthor"></p>
+                            <hr>
+                            <strong><i class="fas fa-image mr-1"></i> Image</strong>
+                            <p class="text-muted" id="viewImage"></p>
+                            <hr>
+                            <strong><i class="fas fa-calendar-alt mr-1"></i> Date</strong>
+                            <p class="text-muted" id="viewDate"></p>
+                        </div>  
+
+
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"> </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
+    <script src="assets/js/popper.min.js"> </script>
+    <script src="assets/js/bootstrap.min.js"> </script>
+    <script src="assets/js/custom-script.js"> </script>
+    <script>
+        $("#addBlogForm").submit(function (e) {
+            e.preventDefault();
+            var title = $("#title").val();
+            var description = $("#description").val();
+            var author = $("#author").val();
+            var image = $("#image").val();
+            var date = $("#date").val();
+
+            let errors = 0;
+
+            if (title == "") {
+                $("#titlemsg").html("Title is required");
+                errors++;
+            } else {
+                $("#titlemsg").html("");
+            }
+
+            if (description == "") {
+                $("#descriptionmsg").html("Description is required");
+                errors++;
+            } else {
+                $("#descriptionmsg").html("");
+            }
+
+            if (author == "") {
+                $("#authormsg").html("Author is required");
+                errors++;
+            } else {
+                $("#authormsg").html("");
+            }
+
+            if (image == "") {
+                $("#imagemsg").html("Image url is required");
+                errors++;
+            } else {
+                $("#imagemsg").html("");
+            }
+
+            if (date == "") {
+                $("#datemsg").html("Date is required");
+                errors++;
+            } else {
+                $("#datemsg").html("");
+            }
+
+            // if errors are 0 then then everytime add the into blogList localStorage with auto generated unique id in localStorage
+            if (errors == 0) {
+                var blogList = JSON.parse(localStorage.getItem("blogList"));
+                if (blogList == null) {
+                    blogList = [];
+                }
+                var blog = {
+                    id: Math.floor(Math.random() * 1000000000),
+                    title: title,
+                    description: description,
+                    author: author,
+                    image: image,
+                    date: date
+                }
+                blogList.push(blog);
+                localStorage.setItem("blogList", JSON.stringify(blogList));
+                alert("Blog Added Successfully");
+                $("#addBlogForm")[0].reset();
+                $("#addBlog").modal("hide");
+                showBlog();
+            }
+        });
+
+        function showBlog() {
+            var blogList = JSON.parse(localStorage.getItem("blogList"));
+            var html = "";
+            for (var i = 0; i < blogList.length; i++) {
+                html += "<tr>";
+                html += "<td>" + blogList[i].title.substring(0, 25) + "...</td>";
+                html += "<td>" + blogList[i].description.substring(0, 25) + "...</td>";
+                html += "<td>" + blogList[i].author + "</td>";
+                html += "<td><a href='" + blogList[i].image + "' target='_blank'><img src='" + blogList[i].image + "' width='30' height='30'></a></td>";
+                html += "<td>" + blogList[i].date + "</td>";
+                html += "<td><i class='fa fa-edit' onclick='editBlog(" + blogList[i].id + ")'></i> <i class='fa fa-trash' onclick='deleteBlog(" + blogList[i].id + ")'></i> <i class='fa fa-eye' onclick='viewBlog(" + blogList[i].id + ")'></i></td>";
+                html += "</tr>";
+            }
+            $("#blogList").html(html);
+        }
+
+        // Search Functionality title, author, date, description
+        $("#table_search").keyup(function () {
+            var search = $("#table_search").val();
+            var blogList = JSON.parse(localStorage.getItem("blogList"));
+            var html = "";
+            for (var i = 0; i < blogList.length; i++) {
+                if (blogList[i].title.toLowerCase().includes(search.toLowerCase()) || blogList[i].author.toLowerCase().includes(search.toLowerCase()) || blogList[i].date.toLowerCase().includes(search.toLowerCase()) || blogList[i].description.toLowerCase().includes(search.toLowerCase())) {
+                    html += "<tr>";
+                    html += "<td>" + blogList[i].title.substring(0, 25) + "...</td>";
+                    html += "<td>" + blogList[i].description.substring(0, 25) + "...</td>";
+                    html += "<td>" + blogList[i].author + "</td>";
+                    // image preview with 30x30 size and if click on image then open in new tab
+                    html += "<td><a href='" + blogList[i].image + "' target='_blank'><img src='" + blogList[i].image + "' width='30' height='30'></a></td>";
+                    html += "<td>" + blogList[i].date + "</td>";
+                    html += "<td><i class='fa fa-edit' onclick='editBlog(" + blogList[i].id + ")'></i> <i class='fa fa-trash' onclick='deleteBlog(" + blogList[i].id + ")'></i></td>";
+                    html += "<td><i class='fa fa-eye' onclick='viewBlog(" + blogList[i].id + ")'></i></td>";
+                    html += "</tr>";
+                }
+            }
+            $("#blogList").html(html);
+        });
+
+        // viewBlog function in modal viewBlog
+        function viewBlog(id) {
+            var blogList = JSON.parse(localStorage.getItem("blogList"));
+            for (var i = 0; i < blogList.length; i++) {
+                if (blogList[i].id == id) {
+                    $("#viewTitle").html(blogList[i].title);
+                    $("#viewDescription").html(blogList[i].description);
+                    $("#viewAuthor").html(blogList[i].author);
+                    $("#viewImage").html("<img src='" + blogList[i].image + "' style='width:180px;'>");
+                    $("#viewDate").html(blogList[i].date);
+                }
+            }
+            $("#viewBlog").modal("show");
+        }
+
+
+
+
+        showBlog();
+        
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

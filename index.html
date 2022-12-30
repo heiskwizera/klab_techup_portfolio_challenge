@@ -4,14 +4,14 @@
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/style.css">
-   <link rel="stylesheet" href="assets/css/responsive.css">
+   <link rel="stylesheet" href="assets/css/animate.css" media="all">
+   <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css" media="all">
+   <link rel="stylesheet" href="assets/css/style.css" media="all">
+   <link rel="stylesheet" href="assets/css/responsive.css" media="all">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous" />
-   
+      crossorigin="anonymous" media="all" />
+
    <title>KWIZERA Portfolio</title>
 </head>
 
@@ -55,16 +55,17 @@
                               <a class="nav-link p-0" href="#blog">Blog</a>
                            </li>
                         </ul>
-                       
+
                         <div class="d-inline-block contact">
-                           <a href="#" id="loginLink"  class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</a>
-                         </div>  
+                           <a href="#" id="loginLink" class="btn btn-primary" data-toggle="modal"
+                              data-target="#loginModal">Login</a>
+                        </div>
                      </div>
                   </nav>
                </div>
             </div>
          </header>
-         
+
 
          <section class="banner-main-con" id="home">
             <div class="container pl-0 pr-0">
@@ -198,7 +199,7 @@
    </section>
 
    <section class="w-100 float-left skill-con padding-top padding-bottom position-relative" id="skills">
-      
+
       <div class="container">
          <div class="skill-inner-con position-relative">
             <div class="row">
@@ -321,7 +322,9 @@
                         Digital Experiences
                      </h2>
                      <p>
-                        I am an experienced Developer and technologist who helps brands grow fast online. I am passionate about helping brands create beautiful and unique digital experiences that connect with their audiences.
+                        I am an experienced Developer and technologist who helps brands grow fast online. I am
+                        passionate about helping brands create beautiful and unique digital experiences that connect
+                        with their audiences.
                      </p>
                      <div class="generic-btn download-bnt">
                         <a href="#" id="downloadImg" onclick="downloadImage()">Download CV</a>
@@ -473,8 +476,10 @@
                            </figure>
                            <div class="testimonials-inner-content">
                               <p>
-                                 I am happy with KWIZERA's work. He is very professional and has a great eye for design. He
-                                 is very responsive and always willing to make changes. I would definitely recommend him.
+                                 I am happy with KWIZERA's work. He is very professional and has a great eye for design.
+                                 He
+                                 is very responsive and always willing to make changes. I would definitely recommend
+                                 him.
                               </p>
                               <span class="d-block auther-name">Nicole RUBAYIZA</span>
                               <span class="d-block">CEO of the company</span>
@@ -499,7 +504,7 @@
                            </div>
                         </div>
                      </div>
-                     
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                      <i class="fas fa-arrow-left d-flex align-items-center justify-content-center"></i>
@@ -632,7 +637,7 @@
                            <div class="contact-information-content">
                               <h5>Address:</h5>
                               <p class="mb-0">Kigali AVE 24 St,
-                                 
+
                               </p>
                            </div>
                         </li>
@@ -643,7 +648,7 @@
                            <div class="contact-information-content">
                               <h5>Email:</h5>
                               <p class="mb-0">he.kwizera@gmail.com</p>
-                       
+
                            </div>
                         </li>
                         <li class="mb-0">
@@ -663,35 +668,39 @@
 
                   </div>
 
-                  <form id="contactpage" method="POST" class="contact-form wow slideInRight text-lg-left text-center">
+                  <form id="contactpage" class="contact-form wow slideInRight text-lg-left text-center">
                      <div class="row">
                         <div class="col-lg-6 col-md-6">
                            <div class="form-group mb-0">
-                              <input type="text" placeholder="Name" name="name" id="name" autocomplete="off" required>
+                              <input type="text" placeholder="Name" name="Name" id="Name" autocomplete="off"
+                                 class="form-control">
+                              <div id="names-feedback" class="error-msg"></div>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                            <div class="form-group mb-0">
-                              <input type="email" id="emailHelp" name="emailHelp" placeholder="Email" autocomplete="off"
-                                 required>
-                              <small class="form-text text-muted"></small>
+                              <input type="email" id="Email" name="emailHelp" placeholder="Email" autocomplete="off">
+                              <div id="email-feedback" class="error-msg"></div>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                            <div class="form-group mb-0">
-                              <input type="tel" placeholder="Phone" name="phone" id="phone" required>
+                              <input type="tel" placeholder="Phone" name="phone" id="Phone">
+                              <div id="tel-feedback" class="error-msg"></div>
                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                            <div class="form-group mb-0">
-                              <input type="text" name="subject" placeholder="Subject" id="subject">
+                              <input type="text" name="subject" placeholder="Subject" id="Subject">
+                              <div id="subject-feedback" class="error-msg"></div>
                            </div>
                         </div>
                      </div>
                      <div class="row">
                         <div class="col-lg-12">
                            <div class="form-group mb-0">
-                              <textarea placeholder="Message" rows="3" name="comments" id="comments"></textarea>
+                              <textarea placeholder="Message" rows="3" name="comments" id="Comments"></textarea>
+                              <div id="comments-feedback" class="error-msg"></div>
                            </div>
                         </div>
                      </div>
@@ -761,12 +770,12 @@
                   <div class="form-group">
                      <label for="recipient-name" class="col-form-label">Email:</label>
                      <input type="email" class="form-control" id="recipient-name">
-                     <div id="msg"></div>
+                     <div id="msg" class="auth-error-msg"></div>
                   </div>
                   <div class="form-group">
                      <label for="message-text" class="col-form-label">Password:</label>
                      <input type="password" class="form-control" id="message-text">
-                     <div id="passmsg"></div>
+                     <div id="passmsg" class="auth-error-msg"></div>
                   </div>
                   <button type="submit" class="btn btn-warning">
                      Login
@@ -775,14 +784,14 @@
 
                </form>
             </div>
-         
+
          </div>
       </div>
    </div>
 
    <!-- Login successfully Modal with tick icon-->
-   <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog"
-      aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
+   <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginSuccessModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
@@ -804,38 +813,53 @@
       </div>
    </div>
 
-
-   <style>
-      .modal {
-         display: none;
-         padding-top: 100px;
-         left: 0;
-         top: 0;
-         width: 100%;
-         background-color: rgb(0, 0, 0);
-         background-color: rgba(0, 0, 0, 0.4);
-      }
-      .modal-content {
-         color: #fefefe;
-         margin: auto;
-         padding: 20px;
-         border: 1px solid #888;
-         width: 80%;
-      }
-
-      .close {
-         color: #aaaaaa;
-         float: right;
-         font-size: 28px;
-         font-weight: bold;
-      }
-
-     
-   </style>
-   
-   
+   <!-- Message successfully sent Modal-->
+   <div class="modal fade" id="messageSentModal" tabindex="-1" role="dialog" aria-labelledby="messageSentModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="messageSentModalLabel">Message Sent</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="alert alert-success" role="alert">
+                  <h4 class="alert-heading">Well done!</h4>
+                  <p>Your message has been sent successfully.</p>
+               </div>
+            </div>
+         </div>
+      </div>
 
 
+      <style>
+         .modal {
+            display: none;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+         }
+
+         .modal-content {
+            color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+         }
+
+         .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+         }
+      </style>
 
 
 
@@ -843,202 +867,268 @@
 
 
 
-   <script src="assets/js/wow.js"></script>
-   <script>
-      new WOW().init();
-   </script>
-   <script src="assets/js/jquery-3.6.0.min.js"> </script>
-   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
-   <script src="assets/js/popper.min.js"> </script>
-   <script src="assets/js/bootstrap.min.js"> </script>
-   <script src="assets/js/custom-script.js"> </script>
-   <script src="assets/js/contact-form.js"></script>
-   <script>
-      // if loginForm of the modal is submitted get email and password values
-      $("#loginForm").submit(function (e) {
-         e.preventDefault();
-         var email = $("#recipient-name").val();
-         var password = $("#message-text").val();
 
-         $allValid = false;
 
-         // Validate email and password and if error show error under the input field on each input field until it is corrected
-         if (email == "") {
-            $("#msg").html("Please enter your email");
-            $("#msg").css("color", "red");
+
+
+      <script src="assets/js/wow.js"></script>
+      <script>
+         new WOW().init();
+      </script>
+      <script src="assets/js/jquery-3.6.0.min.js"> </script>
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
+      <script src="assets/js/popper.min.js"> </script>
+      <script src="assets/js/bootstrap.min.js"> </script>
+      <script src="assets/js/custom-script.js"> </script>
+      <script>
+
+         $("#loginForm").submit(function (e) {
+            e.preventDefault();
+            var email = $("#recipient-name").val();
+            var password = $("#message-text").val();
+
             $allValid = false;
-         }else{
-            $("#msg").html("");
-            $allValid = true;
-         }
-         
-         if (password == "") {
-            $("#passmsg").html("Please enter your password");
-            $("#passmsg").css("color", "red");
+
+
+            if (email == "") {
+               $("#msg").html("Please enter your email");
+               $allValid = false;
+            } else {
+               $("#msg").html("");
+               $allValid = true;
+            }
+
+            if (password == "") {
+               $("#passmsg").html("Please enter your password");
+               $allValid = false;
+            } else {
+               $("#passmsg").html("");
+               $allValid = true;
+            }
+
+
+            if ($allValid) {
+               $("#loginModal").modal("hide");
+               $("#loginSuccessModal").modal("show");
+            }
+         });
+
+
+         $("#contactpage").submit(function (e) {
+            e.preventDefault();
+            var name = $("#Name").val();
+            var email = $("#Email").val();
+            var subject = $("#Subject").val();
+            var phone = $("#Phone").val();
+            var comments = $("#Comments").val();
+            var form = 
             $allValid = false;
-         }else{
-            $("#passmsg").html("");
-            $allValid = true;
-         }
-
-         // if all input fields are valid then show login success modal
-         if ($allValid) {
-            $("#loginModal").modal("hide");
-            $("#loginSuccessModal").modal("show");
-         }
-      });
 
 
-      // when loginLink is clicked, hide the navbar
-      $("#loginLink").click(function () {
-         $(".navbar-collapse").collapse("hide");
-      });
 
-
-      filterSelection("all")
-      function filterSelection(c) {
-         var x, i;
-         x = document.getElementsByClassName("filterDiv");
-         if (c == "all") c = "";
-         for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-         }
-      }
-
-      function w3AddClass(element, name) {
-         var i, arr1, arr2;
-         arr1 = element.className.split(" ");
-         arr2 = name.split(" ");
-         for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-         }
-      }
-
-      function w3RemoveClass(element, name) {
-         var i, arr1, arr2;
-         arr1 = element.className.split(" ");
-         arr2 = name.split(" ");
-         for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-               arr1.splice(arr1.indexOf(arr2[i]), 1);
-            }
-         }
-         element.className = arr1.join(" ");
-      }
-
-      // Add active class to the current button (highlight it)
-      var btnContainer = document.getElementById("myBtnContainer");
-      var btns = btnContainer.getElementsByClassName("btn");
-      for (var i = 0; i < btns.length; i++) {
-         btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-         });
-      }
-   </script>
-   <script>
-      var btn = $('#button');
-
-      $(window).scroll(function () {
-         if ($(window).scrollTop() > 300) {
-            btn.addClass('show');
-         } else {
-            btn.removeClass('show');
-         }
-      });
-
-      btn.on('click', function (e) {
-         e.preventDefault();
-         $('html, body').animate({ scrollTop: 0 }, '300');
-      });
-
-   </script>
-   <script>
-      $(window).scroll(function () {
-
-         if ($(window).scrollTop() >= 113) {
-
-            $('header').addClass('fixed-header');
-            $('.banner-main-con').addClass('banner-main-con2');
-
-         }
-
-         else {
-
-            $('header').removeClass('fixed-header');
-            $('.banner-main-con').removeClass('banner-main-con2');
-
-         }
-
-      });
-
-      document.querySelectorAll('.nav-item a').forEach(function (link, index) {
-
-         link.addEventListener('click', function () {
-
-            if (this.classList.contains('is-active')) {
-
-               this.classList.remove('is-active');
-
+            if (name == "") {
+               $("#names-feedback").html("Please enter your name");
+               $allValid = false;
             } else {
-
-               const activeLink = document.querySelector('a.is-active'); // **
-
-               if (activeLink) {                                         // **
-
-                  activeLink.classList.remove('is-active');             // **
-
-               }                                                         // **
-
-               this.classList.add('is-active');
-
+               $("#names-feedback").html("");
+               $allValid = true;
             }
 
-         });
 
-      });
-
-      document.querySelectorAll('#myBtnContainer button').forEach(function (link, index) {
-
-         link.addEventListener('click', function () {
-
-            if (this.classList.contains('active_button')) {
-
-               this.classList.remove('active_button');
-
+            if (email == "") {
+               $("#email-feedback").html("Please enter your email");
+               $allValid = false;
             } else {
+               $("#email-feedback").html("");
+               $allValid = true;
+            }
 
-               const activeLink = document.querySelector('#myBtnContainer button.active_button'); // **
 
-               if (activeLink) {                                         // **
+            if (subject == "") {
+               $("#subject-feedback").html("Please enter your subject");
+               $allValid = false;
+            } else {
+               $("#subject-feedback").html("");
+               $allValid = true;
+            }
 
-                  activeLink.classList.remove('active_button');             // **
 
-               }                                                         // **
+            if (phone == "") {
+               $("#tel-feedback").html("Please enter your phone");
+               $allValid = false;
+            } else {
+               $("#tel-feedback").html("");
+               $allValid = true;
+            }
 
-               this.classList.add('active_button');
+
+            if (comments == "") {
+               $("#comments-feedback").html("Please enter your comments");
+               $allValid = false;
+            } else {
+               $("#comments-feedback").html("");
+               $allValid = true;
+            }
+
+
+            if ($allValid) {
+               var messagesList = JSON.parse(localStorage.getItem("messagesList")) || [];
+               var message = {
+                  id: new Date().getTime(),
+                  name: name,
+                  email: email,
+                  subject: subject,
+                  phone: phone,
+                  comments: comments
+               };
+               messagesList.push(message);
+               localStorage.setItem("messagesList", JSON.stringify(messagesList));
+
+               $("#messageSentModal").modal("show");
+               setTimeout(function () {
+                  $("#Name").val("");
+                  $("#Email").val("");
+                  $("#Subject").val("");
+                  $("#Phone").val("");
+                  $("#Comments").val("");
+               }, 2000);
+            }
+
+         });
+
+
+      </script>
+
+      <script>
+         // when loginLink is clicked, hide the navbar
+         $("#loginLink").click(function () {
+            $(".navbar-collapse").collapse("hide");
+         });
+
+         filterSelection("all")
+         function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+               w3RemoveClass(x[i], "show");
+               if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+         }
+
+         function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+               if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+         }
+
+         function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+               while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);
+               }
+            }
+            element.className = arr1.join(" ");
+         }
+
+         // Add active class to the current button (highlight it)
+         var btnContainer = document.getElementById("myBtnContainer");
+         var btns = btnContainer.getElementsByClassName("btn");
+         for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+               var current = document.getElementsByClassName("active");
+               current[0].className = current[0].className.replace(" active", "");
+               this.className += " active";
+            });
+         }
+
+         $(window).scroll(function () {
+
+            if ($(window).scrollTop() >= 113) {
+
+               $('header').addClass('fixed-header');
+               $('.banner-main-con').addClass('banner-main-con2');
+
+            }
+
+            else {
+
+               $('header').removeClass('fixed-header');
+               $('.banner-main-con').removeClass('banner-main-con2');
 
             }
 
          });
 
-      });
-   </script>
-   <script>
-      function downloadImage() {
-         source = 'assets/image/cv-img.png';
-         const fileName = 'test-image.png';
-         var el = document.createElement("a");
-         el.setAttribute("href", source);
-         el.setAttribute("download", fileName);
-         document.body.appendChild(el);
-         el.click();
-         el.remove();
-      }
+         document.querySelectorAll('.nav-item a').forEach(function (link, index) {
 
-   </script>
+            link.addEventListener('click', function () {
+
+               if (this.classList.contains('is-active')) {
+
+                  this.classList.remove('is-active');
+
+               } else {
+
+                  const activeLink = document.querySelector('a.is-active'); // **
+
+                  if (activeLink) {                                         // **
+
+                     activeLink.classList.remove('is-active');             // **
+
+                  }                                                         // **
+
+                  this.classList.add('is-active');
+
+               }
+
+            });
+
+         });
+
+         document.querySelectorAll('#myBtnContainer button').forEach(function (link, index) {
+
+            link.addEventListener('click', function () {
+
+               if (this.classList.contains('active_button')) {
+
+                  this.classList.remove('active_button');
+
+               } else {
+
+                  const activeLink = document.querySelector('#myBtnContainer button.active_button'); // **
+
+                  if (activeLink) {                                         // **
+
+                     activeLink.classList.remove('active_button');             // **
+
+                  }                                                         // **
+
+                  this.classList.add('active_button');
+
+               }
+
+            });
+
+         });
+
+         function downloadImage() {
+            source = 'assets/image/cv-img.png';
+            const fileName = 'test-image.png';
+            var el = document.createElement("a");
+            el.setAttribute("href", source);
+            el.setAttribute("download", fileName);
+            document.body.appendChild(el);
+            el.click();
+            el.remove();
+         }
+      </script>
 </body>
 
 </html>

@@ -35,29 +35,9 @@
                             <li>
                                 <a href="dashboard.html">
                                     <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                                    <span class="title">Dashboard</span>
+                                    <span class="title text-warning">Dashboard</span>
                                 </a>
                             </li>
-
-                            <!-- <li>
-                                <a href="profile.html">
-                                    <span class="icon"><i class="fas fa-user"></i></span>
-                                    <span class="title">Profile</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html">
-                                    <span class="icon"><i class="fas fa-address-book"></i></span>
-                                    <span class="title">Contact</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="testimonial.html">
-                                    <span class="icon"><i class="fas fa-comments"></i></span>
-                                    <span class="title">Testimonial</span>
-                                </a>
-                            </li> -->
 
                             <li>
                                 <a href="blog.html">
@@ -71,7 +51,7 @@
                                     <span class="icon"><i class="fas fa-envelope"></i></span>
                                     <span class="title">Messages</span>
                                 </a>
-                            </li>                            
+                            </li>
                             <li>
                                 <a href="index.html">
                                     <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
@@ -95,7 +75,7 @@
                     <div class="main">
                         <div class="row pb-10">
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <div class="card">
+                                <div class="card" onclick="location.href='blog.html'">
                                     <div class="card-header">
                                         <div class="card-title">Total Blogs</div>
                                     </div>
@@ -104,13 +84,13 @@
                                             <div class="card-icon">
                                                 <i class="fas fa-blog"></i>
                                             </div>
-                                            <div class="card-number">3</div>
+                                            <div class="card-number" id="totalBlogs"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div class="card">
+                                <div class="card" onclick="location.href='message.html'">
                                     <div class="card-header">
                                         <div class="card-title">Total Messages</div>
                                     </div>
@@ -119,7 +99,7 @@
                                             <div class="card-icon">
                                                 <i class="fas fa-envelope"></i>
                                             </div>
-                                            <div class="card-number">10</div>
+                                            <div class="card-number" id="totalMessages"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -132,8 +112,6 @@
     </div>
 
     <style>
-     
-
         .container-fluid {
             padding: 0;
         }
@@ -141,7 +119,8 @@
         .row {
             margin: 0;
         }
-        .main{
+
+        .main {
             margin-top: 20px;
         }
 
@@ -204,7 +183,8 @@
             font-size: 20px;
             font-weight: 500;
         }
-        .card-title{
+
+        .card-title {
             font-size: 20px;
         }
 
@@ -213,7 +193,7 @@
             margin-left: -98px;
         }
 
-        
+
         .main-content .header {
             background: #14213d;
             padding: 32px;
@@ -231,42 +211,30 @@
             font-size: 18px;
             font-weight: 500;
         }
-        .fa, .far, .fas{
+
+        .fa,
+        .far,
+        .fas {
             color: #fca61f;
         }
-
     </style>
-
-
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="assets/js/jquery-3.6.0.min.js"> </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
     <script src="assets/js/popper.min.js"> </script>
     <script src="assets/js/bootstrap.min.js"> </script>
     <script src="assets/js/custom-script.js"> </script>
-    <script src="assets/js/contact-form.js"></script>
+
+
+
+    <script>
+        // Count total numbers of messages in messagesList array of localstorage and display it in totalMessages element
+        let totalMessages = localStorage.getItem("messagesList") ? JSON.parse(localStorage.getItem("messagesList")).length : 0;
+        let totalBlogs = localStorage.getItem("blogList") ? JSON.parse(localStorage.getItem("blogList")).length : 0;
+        document.getElementById("totalBlogs").innerHTML = totalBlogs;
+        document.getElementById("totalMessages").innerHTML = totalMessages;
+
+
+
+        
+    </script>
 </body>
