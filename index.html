@@ -704,7 +704,7 @@
                            </div>
                         </div>
                      </div>
-                     <button type="submit" id="submit" class="appointment-btn">Submit</button>
+                     <button type="submit" id="submitButton" class="appointment-btn">Submit</button>
                   </form>
 
                </div>
@@ -864,13 +864,6 @@
 
 
 
-
-
-
-
-
-
-
       <script src="assets/js/wow.js"></script>
       <script>
          new WOW().init();
@@ -880,6 +873,15 @@
       <script src="assets/js/popper.min.js"> </script>
       <script src="assets/js/bootstrap.min.js"> </script>
       <script src="assets/js/custom-script.js"> </script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+      </script>
+
+      <script type="text/javascript">
+         (function () {
+            emailjs.init("Jh1eJdw2JnuT7oPJg");
+         })();
+      </script>
+
       <script>
 
          $("#loginForm").submit(function (e) {
@@ -921,8 +923,8 @@
             var subject = $("#Subject").val();
             var phone = $("#Phone").val();
             var comments = $("#Comments").val();
-            var form = 
             $allValid = false;
+            let submitButton = document.getElementById("submitButton");
 
 
 
@@ -972,6 +974,12 @@
 
 
             if ($allValid) {
+
+               // Disable the submit button to prevent repeated clicks and set its inner text to "Sending..."
+                // $("#contactpage").find("button").prop("disabled", true).text("Sending...");
+               submitButton.disabled = true;
+               submitButton.innerHTML = "Sending...";
+               
                var messagesList = JSON.parse(localStorage.getItem("messagesList")) || [];
                var message = {
                   id: new Date().getTime(),
@@ -981,17 +989,37 @@
                   phone: phone,
                   comments: comments
                };
-               messagesList.push(message);
-               localStorage.setItem("messagesList", JSON.stringify(messagesList));
 
-               $("#messageSentModal").modal("show");
-               setTimeout(function () {
-                  $("#Name").val("");
-                  $("#Email").val("");
-                  $("#Subject").val("");
-                  $("#Phone").val("");
-                  $("#Comments").val("");
-               }, 2000);
+               var templateParams = {
+                  name: name,
+                  email: email,
+                  subject: subject,
+                  phone: phone,
+                  message: comments,
+                  to: "KWIZERA Fabrice"
+               };
+
+               emailjs.send("service_s5gvxpc", "template_jlqlmjc", templateParams)
+                  .then(function (response) {
+                     messagesList.push(message);
+                     localStorage.setItem("messagesList", JSON.stringify(messagesList));
+                     $("#messageSentModal").modal("show");
+                     setTimeout(function () {
+                        $("#Name").val("");
+                        $("#Email").val("");
+                        $("#Subject").val("");
+                        $("#Phone").val("");
+                        $("#Comments").val("");
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = "Send";
+                     }, 2000);
+                  }, function (error) {
+                     console.log(error)
+                     alert(error)
+                  });
+
+
+
             }
 
          });
