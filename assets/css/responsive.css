@@ -1,15 +1,7 @@
 
 @media only screen and (max-width: 1400px){
-    .happy-con {
-        right: 0px;
-        top: 26%;
-    }
     .banner-right-con img[alt="banner-right-img"]{
         width: 84vh;
-    }
-    .banner-right-con::after {
-        bottom: 80px;
-        right: -39px;
     }
 }
 
@@ -328,6 +320,7 @@
         right: 0;
         top: 48px;
         z-index: 2;
+        margin-top: 5px;
     }
     .navbar-toggler-icon {
         border-bottom: 2px solid #fca61f;
@@ -359,6 +352,8 @@
     }
     .banner-right-con img[alt="banner-right-img"] {
         width: 60%;
+        /* margin-left: -90px; */
+
     }
     .best-award-con {
         left: 68px;

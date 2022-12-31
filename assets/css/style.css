@@ -1780,3 +1780,6 @@ i,
 .card {
     cursor: pointer;
 }
+.minifont{
+    font-size: 20px;
+}
