@@ -4,112 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/bootstarp/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 
     <title>Dashboard</title>
-</head>
-
-
-
-
-<body>
-
-    <!-- Create simple responsive Dashboard with right sidebar-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12">
-                <div class="sidebar">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/image/logo-img.png" style="width: 200px;" alt="logo">
-                        </a>
-                    </div>
-                    <div class="sidebar-menu">
-                        <ul>
-                            <li>
-                                <a href="dashboard.html">
-                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                                    <span class="title text-warning">Dashboard</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="blog.html">
-                                    <span class="icon"><i class="fas fa-blog"></i></span>
-                                    <span class="title">Blogs</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="message.html">
-                                    <span class="icon"><i class="fas fa-envelope"></i></span>
-                                    <span class="title">Messages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html">
-                                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                                    <span class="title">Logout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 col-sm-12 col-xs-12">
-                <div class="main-content">
-                    <div class="header">
-                        <div class="header-menu">
-                            <div class="title">Dashboard</div>
-                            <div class="sidebar-btn">
-                                <i class="fas fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main">
-                        <div class="row pb-10">
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <div class="card" onclick="location.href='blog.html'">
-                                    <div class="card-header">
-                                        <div class="card-title">Total Blogs</div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <div class="card-icon">
-                                                <i class="fas fa-blog"></i>
-                                            </div>
-                                            <div class="card-number" id="totalBlogs"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div class="card" onclick="location.href='message.html'">
-                                    <div class="card-header">
-                                        <div class="card-title">Total Messages</div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-content">
-                                            <div class="card-icon">
-                                                <i class="fas fa-envelope"></i>
-                                            </div>
-                                            <div class="card-number" id="totalMessages"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <style>
         .container-fluid {
@@ -218,23 +122,99 @@
             color: #fca61f;
         }
     </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/image/logo-img.png" style="width: 200px;" alt="logo">
+                        </a>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                                    <span class="title text-warning">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="blog.html">
+                                    <span class="icon"><i class="fas fa-blog"></i></span>
+                                    <span class="title">Blogs</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="message.html">
+                                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                                    <span class="title">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                                    <span class="title">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="main-content">
+                    <div class="header">
+                        <div class="header-menu">
+                            <div class="title">Dashboard</div>
+                            <div class="sidebar-btn">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="row pb-10">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="card" onclick="location.href='blog.html'">
+                                    <div class="card-header">
+                                        <div class="card-title">Total Blogs</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="card-icon">
+                                                <i class="fas fa-blog"></i>
+                                            </div>
+                                            <div class="card-number" id="totalBlogs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="card" onclick="location.href='message.html'">
+                                    <div class="card-header">
+                                        <div class="card-title">Total Messages</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="card-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="card-number" id="totalMessages"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery-3.6.0.min.js"> </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" async></script>
-    <script src="assets/js/popper.min.js"> </script>
     <script src="assets/js/bootstrap.min.js"> </script>
-    <script src="assets/js/custom-script.js"> </script>
-
-
-
-    <script>
-        // Count total numbers of messages in messagesList array of localstorage and display it in totalMessages element
-        let totalMessages = localStorage.getItem("messagesList") ? JSON.parse(localStorage.getItem("messagesList")).length : 0;
-        let totalBlogs = localStorage.getItem("blogList") ? JSON.parse(localStorage.getItem("blogList")).length : 0;
-        document.getElementById("totalBlogs").innerHTML = totalBlogs;
-        document.getElementById("totalMessages").innerHTML = totalMessages;
-
-
-
-        
-    </script>
+    <script src="process/dashboard.js"></script>
 </body>
