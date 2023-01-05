@@ -120,8 +120,8 @@ document.querySelectorAll('#myBtnContainer button').forEach(function (link, inde
 });
 
 function downloadImage() {
-    source = 'assets/image/cv-img.png';
-    const fileName = 'test-image.png';
+    source = 'assets/image/cv-img.jpg';
+    const fileName = 'my-cv.jpg';
     var el = document.createElement("a");
     el.setAttribute("href", source);
     el.setAttribute("download", fileName);
